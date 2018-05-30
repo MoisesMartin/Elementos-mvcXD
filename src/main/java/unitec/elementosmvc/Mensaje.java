@@ -8,16 +8,22 @@ package unitec.elementosmvc;
 import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 
-/**
- *
- * @author T-107
- */
 public class Mensaje {
     @Id
     private String id;
     private String cuerpo;
-    private LocalDate fecha;
 
+    @Override
+    public String toString() {
+        return "Mensaje{" + "id=" + id + ", cuerpo=" + cuerpo + ", fecha=" + fecha + '}';
+    }
+    private LocalDate fecha;
+      //Este constructor es para hacer un UPDATE ya que incluye el id
+    public Mensaje(String id, String cuerpo, LocalDate fecha) {
+        this.id = id;
+        this.cuerpo = cuerpo;
+        this.fecha = fecha;
+    }
     public Mensaje(String cuerpo, LocalDate fecha) {
         this.cuerpo = cuerpo;
         this.fecha = fecha;
@@ -26,7 +32,8 @@ public class Mensaje {
     public Mensaje(String cuerpo) {
         this.cuerpo = cuerpo;
     }
-
+    
+   
     public Mensaje() {
     }
 

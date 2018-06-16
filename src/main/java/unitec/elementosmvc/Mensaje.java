@@ -20,7 +20,7 @@ public class Mensaje {
     private LocalDate fecha;
       //Este constructor es para hacer un UPDATE ya que incluye el id
     public Mensaje(String id, String cuerpo, LocalDate fecha) {
-        this.id = id;
+        this.id = id;//Terremoto de Oaxaca de 2018 
         this.cuerpo = cuerpo;
         this.fecha = fecha;
     }
